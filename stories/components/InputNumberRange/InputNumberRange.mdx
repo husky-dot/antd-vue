@@ -1,0 +1,70 @@
+import { Story, Canvas } from '@storybook/addon-docs/blocks';
+
+
+## InputNumberRange 数字区间
+
+通过鼠标盘，输入范围内的数值。
+
+
+
+<Story id="组件-inputnumberrange--api" />
+
+### API
+
+下面只说明比较常用和自己封装的属性，其它具体配置可以前往 https://www.antdv.com/components/input-number-cn#components-input-number-demo-size 进行学习查看。
+
+#### 属性
+
+
+<div className="mdTable">
+
+| 参数             | 说明           | 类型           | 可选值 | 默认值 |
+| :--------------- | -------------- | -------------- | ------ | ------ |
+| value            | 支持v-model    | Array          |        |        |
+| minValue         | 区间最小值     | number \| null |        | null   |
+| maxValue         | 区间最大值     | number         |        | null   |
+| startPlaceHolder | 开始区间提示词 | string         |        | ' '    |
+| endPlaceHolder   | 结束区间提示词 | string         |        | ‘’     |
+|                  |                |                |        |        |
+
+</div>
+
+
+#### 事件
+
+
+<div className="mdTable">
+
+| 事件名称           | 说明              | 回调参数 |
+| -------------- | ---------------------------------------- | ----------------- |
+| onChange | 	变化回调  | Function(value: string[])|
+
+
+</div>
+
+
+
+
+
+## 代码演示
+
+**导入组件**
+
+```jsx
+import { Uploader } from '@tqu/antd-vue';
+```
+
+
+#### 基础用法
+
+
+<Canvas>
+  <Story id="组件-inputnumberrange--basic" />
+</Canvas>
+
+#### 设置边界
+
+
+<Canvas>
+  <Story id="组件-inputnumberrange--boundary" />
+</Canvas>

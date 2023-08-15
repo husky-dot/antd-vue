@@ -1,0 +1,18 @@
+# 配置publish阶段
+stages:
+  - publish
+
+publish_npm:
+  image: node:16.15.0
+   # 在publish阶段执行    
+  stage: publish
+  # 只在指定的分支执行该job
+  only:
+    refs:
+      - beta
+      - master
+  
+  # 执行脚本  
+  script:
+    # 执行构建程序 CI=false, 否则会将警告视为错误
+    - CI=false npm run release
